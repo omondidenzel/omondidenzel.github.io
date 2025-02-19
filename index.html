@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Engineer - Omondi Denzel, MSc</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Omondi Denzel, MSc</h1>
+            <h2>Data Engineer <span class="cursor">|</span></h2>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+                <span class="theme-icon"></span>
+            </button>
+        </header>
+
+        <nav>
+            <button class="nav-toggle" aria-label="toggle navigation">Menu</button>
+            <ul class="nav">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#linkedin">LinkedIn</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="about" class="section">
+                <h3>About Me</h3>
+                <p>Experienced Data Engineer with a solid background in SQL databases, Apache Airflow, data pipeline development, and SAP data engineering. Skilled at designing and implementing data-driven solutions that bridge the gap between technical expertise and business needs. Passionate about using technology to drive sustainable development and improve quality of life for underserved populations. Skilled in managing large-scale data systems and collaborating with cross-functional teams.</p>
+            </section>
+
+            <section id="projects" class="section">
+                <h3>My Creations</h3>
+                <div class="project-grid">
+                    <div class="project">
+                        <h4>SAP Pipeline, Python and Tableau</h4>
+                        <p>Using SAP API, I built an ETL extracting data from SAP and storing it in our database, reconciling the dataset with data from Pulse, our in-house system.</p>
+                    </div>
+                    <div class="project">
+                        <h4>Deep Learning Project, Driver Drowsiness Detection (Python)</h4>
+                        <p>Designed and implemented a system to detect driver drowsiness using deep learning techniques in Python.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="section">
+                <h3>My Toolbox</h3>
+                <div class="skills-capsule">
+                    <span>SQL</span>
+                    <span>Python</span>
+                    <span>TensorFlow</span>
+                    <span>PySpark</span>
+                    <span>Kafka</span>
+                    <span>R</span>
+                    <span>Apache Airflow</span>
+                    <span>DBT</span>
+                    <span>PowerBi & Tableau</span>
+                    <span>AWS (S3, Redshift, Glue)</span>
+                </div>
+            </section>
+
+            <section id="contact" class="section">
+                <h3>Let's Connect</h3>
+                <form action="#" method="post">
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </section>
+
+            <section id="linkedin" class="section">
+                <h3>LinkedIn</h3>
+                <p>Connect with me on LinkedIn to explore my professional journey, recommendations, and network:</p>
+                <a href="https://www.linkedin.com/in/omondidenzel/" class="linkedin-link" target="_blank" rel="noopener noreferrer">
+                    <img src="linkedin.png" alt="LinkedIn Logo" class="linkedin-logo">
+                    View My LinkedIn Profile
+                </a>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2025 Omondi Denzel. Data is my art.</p>
+        </footer>
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const themeIcon = document.querySelector('.theme-icon');
+
+        // Check for user's theme preference
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme) {
+            body.classList.add(currentTheme);
+            if(currentTheme === 'light-theme') {
+                themeIcon.classList.add('light');
+            }
+        } else {
+            body.classList.add('dark-theme'); // Default to dark theme
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-theme');
+            body.classList.toggle('dark-theme');
+            const theme = body.classList.contains('light-theme') ? 'light-theme' : 'dark-theme';
+            localStorage.setItem('theme', theme);
+
+            // Update icon based on theme
+            themeIcon.classList.toggle('light');
+        });
+
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav').classList.toggle('nav-open');
+        });
+    </script>
+</body>
+</html>
