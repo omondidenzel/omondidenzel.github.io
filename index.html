@@ -3,120 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Engineer - Omondi Denzel, MSc</title>
+    <title>Omondi Denzel - Data Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Omondi Denzel, MSc</h1>
-            <h2>Data Engineer <span class="cursor">|</span></h2>
-            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
-                <span class="theme-icon"></span>
-            </button>
+        <header class="hero">
+            <div class="stats-bars">
+                <div class="bar" style="animation-delay: 0s;"></div>
+                <div class="bar" style="animation-delay: 0.2s;"></div>
+                <div class="bar" style="animation-delay: 0.4s;"></div>
+                <div class="bar" style="animation-delay: 0.6s;"></div>
+                <div class="bar" style="animation-delay: 0.8s;"></div>
+            </div>
+            <nav class="navbar">
+                <div class="logo">Omondi Denzel</div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button id="theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+            </nav>
+            <div class="hero-content">
+                <i class="fas fa-chart-pie stats-icon"></i>
+                <h1 class="stats-title">Omondi Denzel, MSc</h1>
+                <p class="typewriter"></p>
+            </div>
         </header>
-
-        <nav>
-            <button class="nav-toggle" aria-label="toggle navigation">Menu</button>
-            <ul class="nav">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#linkedin">LinkedIn</a></li>
-            </ul>
-        </nav>
 
         <main>
             <section id="about" class="section">
-                <h3>About Me</h3>
-                <p>Experienced Data Engineer with a solid background in SQL databases, Apache Airflow, data pipeline development, and SAP data engineering. Skilled at designing and implementing data-driven solutions that bridge the gap between technical expertise and business needs. Passionate about using technology to drive sustainable development and improve quality of life for underserved populations. Skilled in managing large-scale data systems and collaborating with cross-functional teams.</p>
-            </section>
-
-            <section id="projects" class="section">
-                <h3>My Creations</h3>
-                <div class="project-grid">
-                    <div class="project">
-                        <h4>SAP Pipeline, Python and Tableau</h4>
-                        <p>Using SAP API, I built an ETL extracting data from SAP and storing it in our database, reconciling the dataset with data from Pulse, our in-house system.</p>
-                    </div>
-                    <div class="project">
-                        <h4>Deep Learning Project, Driver Drowsiness Detection (Python)</h4>
-                        <p>Designed and implemented a system to detect driver drowsiness using deep learning techniques in Python.</p>
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I’m a dedicated Data Engineer with a passion for transforming complex data into meaningful solutions. With expertise in SQL, Python, and data pipeline development, I’ve worked on projects that bridge technical innovation with real-world impact, from finance systems at GiveDirectly to SAP integrations at Bboxx. My goal is to leverage technology for sustainable development and empower underserved communities.</p>
                     </div>
                 </div>
             </section>
 
             <section id="skills" class="section">
-                <h3>My Toolbox</h3>
-                <div class="skills-capsule">
-                    <span>SQL</span>
-                    <span>Python</span>
-                    <span>TensorFlow</span>
-                    <span>PySpark</span>
-                    <span>Kafka</span>
-                    <span>R</span>
-                    <span>Apache Airflow</span>
-                    <span>DBT</span>
-                    <span>PowerBi & Tableau</span>
-                    <span>AWS (S3, Redshift, Glue)</span>
+                <h2>My Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-item" data-tooltip="SQL: Advanced Query Optimization">
+                        <div class="progress-circle" data-progress="90">
+                            <span>SQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-tooltip="Python: Data Pipelines & ML">
+                        <div class="progress-circle" data-progress="85">
+                            <span>Python</span>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-tooltip="Airflow: Workflow Automation">
+                        <div class="progress-circle" data-progress="80">
+                            <span>Airflow</span>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-tooltip="SAP: Enterprise Data Integration">
+                        <div class="progress-circle" data-progress="75">
+                            <span>SAP</span>
+                        </div>
+                    </div>
+                    <div class="skill-item" data-tooltip="Tableau: Interactive Dashboards">
+                        <div class="progress-circle" data-progress="70">
+                            <span>Tableau</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="section">
+                <h2>My Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <i class="fas fa-database project-icon"></i>
+                        <div class="project-info">
+                            <h3>SAP Pipeline</h3>
+                            <p>Designed an ETL pipeline integrating SAP data with Python and Tableau for real-time financial insights.</p>
+                            <a href="https://github.com/omondidenzel" class="btn" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <i class="fas fa-brain project-icon"></i>
+                        <div class="project-info">
+                            <h3>Drowsiness Detection</h3>
+                            <p>Built a deep learning model in Python to detect driver drowsiness, enhancing safety through AI.</p>
+                            <a href="https://github.com/omondidenzel" class="btn" target="_blank">View Project</a>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             <section id="contact" class="section">
-                <h3>Let's Connect</h3>
-                <form action="#" method="post">
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" required></textarea>
-                    <button type="submit">Send</button>
-                </form>
-            </section>
-
-            <section id="linkedin" class="section">
-                <h3>LinkedIn</h3>
-                <p>Connect with me on LinkedIn to explore my professional journey, recommendations, and network:</p>
-                <a href="https://www.linkedin.com/in/omondidenzel/" class="linkedin-link" target="_blank" rel="noopener noreferrer">
-                    <img src="linkedin.png" alt="LinkedIn Logo" class="linkedin-logo">
-                    View My LinkedIn Profile
-                </a>
+                <h2>Contact Me</h2>
+                <div class="contact-content">
+                    <div class="contact-form">
+                        <form action="#" method="post">
+                            <input type="email" placeholder="Your Email" required>
+                            <textarea placeholder="Your Message" required></textarea>
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="contact-map">
+                        <iframe 
+                            id="map"
+                            width="100%" 
+                            height="300" 
+                            frameborder="0" 
+                            scrolling="no" 
+                            marginheight="0" 
+                            marginwidth="0" 
+                            src="https://www.openstreetmap.org/export/embed.html?bbox=36.797223%2C-1.306389%2C36.837223%2C-1.266389&layer=mapnik&marker=-1.286389%2C36.817223">
+                        </iframe>
+                        <div class="social-links">
+                            <a href="https://linkedin.com/in/omondidenzel" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/omondidenzel" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
 
         <footer>
-            <p>© 2025 Omondi Denzel. Data is my art.</p>
+            <p>© 2025 Omondi Denzel. All rights reserved.</p>
+            <span class="footer-quote">Data is the new oil, and I am the refiner.</span>
+            <span id="current-date"></span>
         </footer>
+
+        <button id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
     </div>
 
-    <script>
-        const themeToggle = document.getElementById('theme-toggle');
-        const body = document.body;
-        const themeIcon = document.querySelector('.theme-icon');
-
-        // Check for user's theme preference
-        const currentTheme = localStorage.getItem('theme');
-
-        if (currentTheme) {
-            body.classList.add(currentTheme);
-            if(currentTheme === 'light-theme') {
-                themeIcon.classList.add('light');
-            }
-        } else {
-            body.classList.add('dark-theme'); // Default to dark theme
-        }
-
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('light-theme');
-            body.classList.toggle('dark-theme');
-            const theme = body.classList.contains('light-theme') ? 'light-theme' : 'dark-theme';
-            localStorage.setItem('theme', theme);
-
-            // Update icon based on theme
-            themeIcon.classList.toggle('light');
-        });
-
-        document.querySelector('.nav-toggle').addEventListener('click', function() {
-            document.querySelector('.nav').classList.toggle('nav-open');
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
