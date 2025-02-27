@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Typewriter Effect with Cycling Phrases
     const typewriter = document.querySelector('.typewriter');
-    const phrases = ["Data Engineer", "Pipeline Architect", "Impact Creator"];
+    const phrases = ["Data Engineer", "Data Pipeline Expert", "Data Scientis"];
     let phraseIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
